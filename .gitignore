@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+al-folio/
+node_modules/
+.vscode/
+dist/
+public/

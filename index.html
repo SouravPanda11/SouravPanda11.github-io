@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal academic portfolio website with news, publications, and contact links."
+    />
+    <title>Sourav Panda</title>
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = savedTheme || (prefersDark ? "dark" : "light");
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#about">Sourav Panda</a>
+        <div class="nav-links" id="nav-links">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#service">Service</a>
+        </div>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Switch to dark theme"
+            title="Toggle theme"
+          >
+            <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 4.5V2m0 20v-2.5M4.5 12H2m20 0h-2.5M5.64 5.64 3.86 3.86m16.28 16.28-1.78-1.78m0-12.72 1.78-1.78M3.86 20.14l1.78-1.78M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+              />
+            </svg>
+            <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 14.3A8.5 8.5 0 0 1 9.7 3a7 7 0 1 0 11.3 11.3Z" />
+            </svg>
+          </button>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            Menu
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="content" aria-live="polite">
+      <noscript>
+        JavaScript is required to load the page sections. Open the files in the sections folder to
+        view their contents directly.
+      </noscript>
+    </main>
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Sourav Panda.</p>
+      <p>Website last updated <span id="site-updated">recently</span>.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
