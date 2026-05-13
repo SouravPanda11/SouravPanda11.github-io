@@ -510,30 +510,18 @@ h3 {
   margin-bottom: 12px;
 }
 
-.service-year {
-  margin: 1rem 0 0.75rem;
+.service-list {
   border-top: 1px dashed var(--line);
-  padding-top: 0.45rem;
-  color: var(--muted);
-  font-size: 1.1rem;
-  font-weight: 500;
-  text-align: left;
-}
-
-.service-year:first-of-type {
-  margin-top: 0;
-}
-
-.service-roles-container {
-  margin: 0 0 1.5rem;
-  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  padding-top: 0.85rem;
 }
 
 .service-role-group {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
-  margin: 0 0 0.75rem;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 18px;
+  margin: 0;
   align-items: start;
 }
 
@@ -559,17 +547,47 @@ h3 {
   background: #d97706;
 }
 
-.service-venues {
+.service-entries {
   margin: 0;
-  padding: 0 0 0 20px;
-  list-style: disc;
-}
-
-.service-venues li {
-  margin: 0 0 0.35rem;
   color: var(--text);
   font-size: 16px;
-  line-height: 1.35;
+  line-height: 1.45;
+}
+
+.service-entry-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 12px;
+  margin: 0 0 0.4rem;
+}
+
+.service-entry-row:last-child {
+  margin-bottom: 0;
+}
+
+.service-entry-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.65;
+  text-transform: uppercase;
+}
+
+.service-entry-label.label-conference {
+  color: #2563eb;
+}
+
+.service-entry-label.label-workshop {
+  color: #b000b8;
+}
+
+.service-entries p {
+  margin: 0;
+}
+
+.service-entry-lines {
+  display: grid;
+  gap: 0.28rem;
 }
 
 .service-venue {
@@ -810,13 +828,14 @@ h3 {
     text-align: left;
   }
 
-  .service-year {
-    text-align: left;
-  }
-
   .service-role-group {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .service-entry-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
   }
 
   .publications-heading {
