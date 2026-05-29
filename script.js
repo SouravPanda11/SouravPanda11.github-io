@@ -5,9 +5,6 @@ const year = document.querySelector("#year");
 const content = document.querySelector("#content");
 const siteUpdated = document.querySelector("#site-updated");
 const siteHeader = document.querySelector(".site-header");
-const visitorToggle = document.querySelector(".visitor-toggle");
-const visitorMap = document.querySelector("#visitor-map");
-const visitorMapContent = document.querySelector("#visitor-map-content");
 const siteFiles = ["index.html", "styles.css", "script.js"];
 const sections = [
   "sections/about.html",
@@ -89,22 +86,6 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const currentTheme = document.documentElement.dataset.theme;
     setTheme(currentTheme === "dark" ? "light" : "dark");
-  });
-}
-
-if (visitorToggle && visitorMap && visitorMapContent) {
-  visitorToggle.addEventListener("click", () => {
-    const isOpen = visitorMap.hidden;
-    visitorMap.hidden = !isOpen;
-    visitorToggle.setAttribute("aria-expanded", String(isOpen));
-
-    if (isOpen && !document.querySelector("#clustrmaps")) {
-      const clustrmapsScript = document.createElement("script");
-      clustrmapsScript.type = "text/javascript";
-      clustrmapsScript.id = "clustrmaps";
-      clustrmapsScript.src = visitorMap.dataset.clustrmapsSrc;
-      visitorMapContent.append(clustrmapsScript);
-    }
   });
 }
 
