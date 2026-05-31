@@ -278,6 +278,10 @@ h3 {
   font-size: 16px;
 }
 
+.intro-copy p {
+  text-align: justify;
+}
+
 .actions,
 .socials,
 .pub-links {
