@@ -552,7 +552,7 @@ h3 {
 
 .service-role-group {
   display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
+  grid-template-columns: 136px minmax(0, 1fr);
   gap: 18px;
   margin: 0;
   align-items: start;
@@ -568,7 +568,7 @@ h3 {
   border-radius: 4px;
   white-space: nowrap;
   display: inline-block;
-  width: 100px;
+  width: 126px;
   text-align: center;
 }
 
@@ -578,6 +578,10 @@ h3 {
 
 .service-role-name.role-ac {
   background: #d97706;
+}
+
+.service-role-name.role-mentor {
+  background: #0f766e;
 }
 
 .service-entries {
@@ -612,6 +616,10 @@ h3 {
 
 .service-entry-label.label-workshop {
   color: #b000b8;
+}
+
+.service-entry-label.label-time {
+  color: var(--muted);
 }
 
 .service-entries p {
