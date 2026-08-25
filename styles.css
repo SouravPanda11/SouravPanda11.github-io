@@ -417,7 +417,7 @@ h3 {
 .news th {
   width: 20%;
   min-width: 155px;
-  font-weight: 700;
+  font-weight: 600;
   white-space: nowrap;
 }
 
@@ -516,7 +516,7 @@ h3 {
   padding-top: 0.75rem;
   color: color-mix(in srgb, var(--text) 68%, var(--muted));
   font-size: 1.5rem;
-  font-weight: 650;
+  font-weight: 600;
   text-align: right;
 }
 
@@ -675,6 +675,9 @@ h3 {
 }
 
 .publication-entry .abbr {
+  display: grid;
+  gap: 0.3rem;
+  justify-items: start;
   padding-top: 0.2rem;
 }
 
@@ -706,7 +709,7 @@ h3 {
 .publication-details .title {
   margin-bottom: 0.2rem;
   color: var(--text);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .publication-details .author,
@@ -762,6 +765,7 @@ h3 {
 
 .publication-details .periodical em {
   font-style: italic;
+  font-weight: 350;
 }
 
 .publication-details .venue-link {
