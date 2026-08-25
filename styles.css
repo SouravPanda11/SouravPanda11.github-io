@@ -764,6 +764,37 @@ h3 {
   font-style: italic;
 }
 
+.publication-details .venue-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.3rem;
+  padding: 0.08rem;
+  color: var(--accent);
+  line-height: 0;
+  text-decoration: none;
+  vertical-align: -0.22rem;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.publication-details .venue-link-icon {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: currentColor;
+  -webkit-mask: url("assets/icons/external-link.svg") center / contain no-repeat;
+  mask: url("assets/icons/external-link.svg") center / contain no-repeat;
+}
+
+.publication-details .venue-link:hover,
+.publication-details .venue-link:focus-visible {
+  color: var(--accent-strong);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 .publication-details .links {
   display: flex;
   flex-wrap: wrap;
