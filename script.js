@@ -5,6 +5,7 @@ const year = document.querySelector("#year");
 const content = document.querySelector("#content");
 const siteUpdated = document.querySelector("#site-updated");
 const siteHeader = document.querySelector(".site-header");
+const visitorMap = document.querySelector(".visitor-map");
 const siteFiles = ["index.html", "styles.css", "script.js"];
 const sections = [
   "sections/about.html",
@@ -26,6 +27,24 @@ function setTheme(theme) {
 }
 
 setTheme(document.documentElement.dataset.theme);
+
+function openVisitorMapLinksInNewTab() {
+  if (!visitorMap) {
+    return;
+  }
+
+  visitorMap.querySelectorAll("a").forEach((link) => {
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+  });
+}
+
+if (visitorMap) {
+  openVisitorMapLinksInNewTab();
+
+  const visitorMapObserver = new MutationObserver(openVisitorMapLinksInNewTab);
+  visitorMapObserver.observe(visitorMap, { childList: true, subtree: true });
+}
 
 if (year) {
   year.textContent = new Date().getFullYear();
